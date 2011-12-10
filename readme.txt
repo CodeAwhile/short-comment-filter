@@ -4,7 +4,7 @@ Requires at least: 2.7
 Tested up to: 3.2.1
 Stable tag: 2.2
 
-Description: Automatically Spams or Deletes comments that don't meet a specified length criterion.
+Description: Automatically Spams or Deletes comments that don't meet a specified length requirement.
 
 == Description ==
 
