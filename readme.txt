@@ -1,5 +1,5 @@
 === Short Comment Filter Plugin ===
-Contributors: anderswc
+Contributors: itsananderson
 Requires at least: 2.7
 Tested up to: 3.2.1
 Stable tag: 2.2
