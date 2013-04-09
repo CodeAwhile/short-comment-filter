@@ -1,4 +1,4 @@
-=== Short Comment Filter Plugin ===
+=== Short Comment Filter ===
 Contributors: itsananderson
 Requires at least: 2.7
 Tested up to: 3.5.1
