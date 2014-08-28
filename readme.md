@@ -23,12 +23,12 @@ Short Comment Filter Plugin is pretty flexible. Here are some things you can cus
 * Minimum Count - Sets the minimum number of words/characters (depending on Filter Type) that comments can contain.
 * Default Filter Action - This determines whether filtered comments are deleted, or simply flagged as spam
 * Filter Registered Users - If turned off, registered users will not be filtered. They can create comments of any length.
-* Check Client Side - If turned on, JavaScript will be used on the client side to make sure comments aren\'t too short.
+* Check Client Side - If turned on, JavaScript will be used on the client side to make sure comments aren't too short.
 
 Installation
 ------------
 
 1. Upload the complete `short-comment-filter` folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the \'Plugins\' menu in WordPress
+2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Navigate to Settings > Short Comment Filter to customize the plugin settings.
-4. If you wish to enable client side JavaScript, make sure your comment form has ID \"commentform\" and your comment textbox has ID \"comment\"
+4. If you wish to enable client side JavaScript, make sure your comment form has ID "commentform" and your comment textbox has ID "comment"
