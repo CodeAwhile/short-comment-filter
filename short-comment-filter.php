@@ -86,7 +86,7 @@ class Short_Comment_Filter {
                 'min_count' => Short_Comment_Filter_Settings::get_min_count(),
                 'filter_message' => preg_replace('/[\r\n]+/', '\r\n', addslashes( Short_Comment_Filter_Settings::get_short_comment_message() ) )
             );
-            wp_enqueue_script( 'short-comment-filter', plugins_url( 'js/short-comment-filter.js', __FILE__ ),
+            wp_enqueue_script( 'short-comment-filter', plugins_url( 'js/short-comment-filter-frontend.js', __FILE__ ),
                                array( 'jquery', 'jquery-form' ), self::VERSION );
             wp_localize_script( 'short-comment-filter', 'short_comment_settings', $data );
         }
