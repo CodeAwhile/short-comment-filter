@@ -1,7 +1,7 @@
 <div class="wrap">
     <h2>Short Comment Filter Settings</h2>
     <p>
-        Comments Filtered: <?php Short_Comment_Filter_Settings::filtered_comment_count() ?>
+        Comments Filtered: <?php Short_Comment_Filter_Settings::filtered_comment_count() ?> (Doesn't count comments filtered with JavaScript)
     </p>
     <form method="post" action="options.php">
         <?php settings_fields('shortfilter-options'); ?>
