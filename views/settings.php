@@ -5,6 +5,7 @@
     </p>
     <form method="post" action="options.php">
         <?php settings_fields('shortfilter-options'); ?>
+        <h3 class="title"><?php _e( 'General Settings'); ?></h3>
         <table class="form-table">
             <tr valign="top">
                 <th scope="row"><label for="shortfilter_filter_type">Filter Type</label></th>
@@ -19,10 +20,6 @@
                         ?>
                     </select>
                 </td>
-            </tr>
-            <tr valign="top">
-                <th scope="row"><label for="shortfilter_min_count">Minimum Count</label></th>
-                <td><input type="text" id="shortfilter_min_count" name="shortfilter_min_count" value="<?php Short_Comment_Filter_Settings::min_count() ?>" /></td>
             </tr>
             <tr valign="top">
                 <th scope="row"><label for="shortfilter_default_action">Default Filter Action</label></th>
@@ -46,9 +43,45 @@
                 <th scope="row"><label for="shortfilter_js_check">Check Length With JavaScript</label></th>
                 <td><input type="checkbox" id="shortfilter_js_check" name="shortfilter_js_check" <?php echo Short_Comment_Filter_Settings::get_js_check() == 'on' ? 'checked="checked"' : ''?> /></td>
             </tr>
+        </table>
+        <h3 class="title"><?php _e( 'Short Comment Settings'); ?></h3>
+        <table class="form-table">
+            <tr>
+                <th scope="row"><label for="shortfilter_min_enable">Filter Short Comments</label></th>
+                <td><input type="checkbox" id="shortfilter_min_enable" name="shortfilter_min_enable" <?php echo Short_Comment_Filter_Settings::get_min_enable() == 'on' ? 'checked="checked"' : ''?> /></td>
+            </tr>
+            <tr valign="top">
+                <th scope="row"><label for="shortfilter_min_count">Minimum Count</label></th>
+                <td><input type="text" id="shortfilter_min_count" name="shortfilter_min_count" value="<?php Short_Comment_Filter_Settings::min_count() ?>" /></td>
+            </tr>
             <tr>
                 <th scope="row"><label for="shortfilter_message">Short Comment Message</label></th>
                 <td><textarea type="text" id="shortfilter_message" name="shortfilter_message" rows="3" cols="50" ><?php echo htmlentities( Short_Comment_Filter_Settings::get_short_comment_message(), ENT_QUOTES ) ?></textarea></td>
+            </tr>
+            <tr>
+                <th scope="row">Message Instructions</th>
+                <td>
+                    The following variables will be replaced dynamically with their corresponding values:<br />
+                    <ul>
+                        <li><strong>%type%</strong> - value of Filter Type ('words' or 'characters')</li>
+                        <li><strong>%length%</strong> - value of Minimum Count  </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <h3 class="title"><?php _e( 'Long Comment Settings'); ?></h3>
+        <table class="form-table">
+            <tr>
+                <th scope="row"><label for="shortfilter_max_enable">Filter Short Comments</label></th>
+                <td><input type="checkbox" id="shortfilter_max_enable" name="shortfilter_max_enable" <?php echo Short_Comment_Filter_Settings::get_max_enable() == 'on' ? 'checked="checked"' : ''?> /></td>
+            </tr>
+            <tr valign="top">
+                <th scope="row"><label for="shortfilter_max_count">Maximum Comment Length</label></th>
+                <td><input type="text" id="shortfilter_max_count" name="shortfilter_max_count" value="<?php Short_Comment_Filter_Settings::max_count() ?>" /></td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="shortfilter_max_message">Short Comment Message</label></th>
+                <td><textarea type="text" id="shortfilter_max_message" name="shortfilter_max_message" rows="3" cols="50" ><?php echo htmlentities( Short_Comment_Filter_Settings::get_long_comment_message(), ENT_QUOTES ) ?></textarea></td>
             </tr>
             <tr>
                 <th scope="row">Message Instructions</th>
