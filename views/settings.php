@@ -7,7 +7,7 @@
         <?php settings_fields('shortfilter-options'); ?>
         <h3 class="title"><?php _e( 'General Settings'); ?></h3>
         <table class="form-table">
-            <tr valign="top">
+            <tr>
                 <th scope="row"><label for="shortfilter_filter_type">Filter Type</label></th>
                 <td>
                     <select id="shortfilter_filter_type" name="shortfilter_filter_type">
@@ -21,7 +21,7 @@
                     </select>
                 </td>
             </tr>
-            <tr valign="top">
+            <tr>
                 <th scope="row"><label for="shortfilter_default_action">Default Filter Action</label></th>
                 <td>
                     <select id="shortfilter_default_action" name="shortfilter_default_action">
@@ -50,13 +50,13 @@
                 <th scope="row"><label for="shortfilter_min_enable">Filter Short Comments</label></th>
                 <td><input type="checkbox" id="shortfilter_min_enable" name="shortfilter_min_enable" <?php echo Short_Comment_Filter_Settings::get_min_enable() == 'on' ? 'checked="checked"' : ''?> /></td>
             </tr>
-            <tr valign="top">
+            <tr>
                 <th scope="row"><label for="shortfilter_min_count">Minimum Count</label></th>
                 <td><input type="text" id="shortfilter_min_count" name="shortfilter_min_count" value="<?php Short_Comment_Filter_Settings::min_count() ?>" /></td>
             </tr>
             <tr>
                 <th scope="row"><label for="shortfilter_message">Short Comment Message</label></th>
-                <td><textarea type="text" id="shortfilter_message" name="shortfilter_message" rows="3" cols="50" ><?php echo htmlentities( Short_Comment_Filter_Settings::get_short_comment_message(), ENT_QUOTES ) ?></textarea></td>
+                <td><textarea id="shortfilter_message" name="shortfilter_message" rows="3" cols="50" ><?php echo htmlentities( Short_Comment_Filter_Settings::get_short_comment_message(), ENT_QUOTES ) ?></textarea></td>
             </tr>
             <tr>
                 <th scope="row">Message Instructions</th>
@@ -75,13 +75,13 @@
                 <th scope="row"><label for="shortfilter_max_enable">Filter Short Comments</label></th>
                 <td><input type="checkbox" id="shortfilter_max_enable" name="shortfilter_max_enable" <?php echo Short_Comment_Filter_Settings::get_max_enable() == 'on' ? 'checked="checked"' : ''?> /></td>
             </tr>
-            <tr valign="top">
+            <tr>
                 <th scope="row"><label for="shortfilter_max_count">Maximum Comment Length</label></th>
                 <td><input type="text" id="shortfilter_max_count" name="shortfilter_max_count" value="<?php Short_Comment_Filter_Settings::max_count() ?>" /></td>
             </tr>
             <tr>
                 <th scope="row"><label for="shortfilter_max_message">Short Comment Message</label></th>
-                <td><textarea type="text" id="shortfilter_max_message" name="shortfilter_max_message" rows="3" cols="50" ><?php echo htmlentities( Short_Comment_Filter_Settings::get_long_comment_message(), ENT_QUOTES ) ?></textarea></td>
+                <td><textarea id="shortfilter_max_message" name="shortfilter_max_message" rows="3" cols="50" ><?php echo htmlentities( Short_Comment_Filter_Settings::get_long_comment_message(), ENT_QUOTES ) ?></textarea></td>
             </tr>
             <tr>
                 <th scope="row">Message Instructions</th>
