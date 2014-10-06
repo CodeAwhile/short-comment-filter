@@ -2,7 +2,7 @@ Short Comment Filter
 ====================
 * Contributors: itsananderson
 * Requires at least: 2.7
-* Tested up to: 3.5.1
+* Tested up to: 4.0
 * Stable tag: 2.2
 
 Description: Automatically Spams or Deletes comments that don't meet a specified length requirement.
